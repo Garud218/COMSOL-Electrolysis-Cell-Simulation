@@ -1,15 +1,15 @@
 # COMSOL-Electrolysis-Cell-Simulation
-# COMSOL Simulation of a Pd-D₂O Electrolysis Cell
+## Simulation of a Pd-D₂O Electrolysis Cell
 
-This repository contains the COMSOL Multiphysics simulation files for studying an electrolysis cell. The model was developed as part of an undergraduate project at **IIT Kanpur** under the mentorship of **Prof. [cite_start]Raj G.S. Pala**[cite: 3].
+This repository contains the COMSOL Multiphysics simulation files for studying an electrolysis cell. The model was developed as part of an undergraduate project at **IIT Kanpur** under the mentorship of **Prof. Raj G.S. Pala**.
 
-[cite_start]While the framework models general water ($H_2O$) electrolysis, it is specifically applied here to investigate the phenomenon of excess heat generation in a Palladium-Deuterium ($Pd-D_{2}O$) system, as first reported in the famous **Fleischmann & Pons 1989 experiment**[cite: 5]. [cite_start]The goal is to simulate the underlying electrochemical transport phenomena and provide a basis for studying the anomalous heat effects associated with "cold fusion"[cite: 9, 6].
+While the framework models general water ($H_2O$) electrolysis, it is specifically applied here to investigate the phenomenon of excess heat generation in a Palladium-Deuterium ($Pd-D_{2}O$) system, as first reported in the famous **Fleischmann & Pons 1989 experiment** [1]. The goal is to simulate the underlying electrochemical transport phenomena and provide a basis for studying the anomalous heat effects associated with "cold fusion."
 
 ---
 
 ## ⚛️ Background: The Fleischmann-Pons Experiment
 
-[cite_start]On March 23rd, 1989, electrochemists Martin Fleischmann and Stanley Pons reported the generation of anomalous excess heat during the electrolysis of heavy water ($D_{2}O$) with a palladium (Pd) cathode[cite: 9, 10]. [cite_start]The magnitude of the energy released was far too large to be attributed to any known chemical process, leading them to hypothesize that a nuclear reaction was occurring within the palladium lattice at room temperature[cite: 11, 12]. This simulation aims to model the conditions of their experiment to better understand the physics involved.
+On March 23rd, 1989, electrochemists Martin Fleischmann and Stanley Pons reported the generation of anomalous excess heat during the electrolysis of heavy water ($D_{2}O$) with a palladium (Pd) cathode. The magnitude of the energy released was far too large to be attributed to any known chemical process, leading them to hypothesize that a nuclear reaction was occurring within the palladium lattice at room temperature [1, 2]. This simulation aims to model the conditions of their experiment to better understand the physics involved.
 
 ---
 
@@ -17,7 +17,7 @@ This repository contains the COMSOL Multiphysics simulation files for studying a
 
 This project involved a detailed investigation into the electrochemical behavior of the cell. The key analyses performed include:
 
-* [cite_start]**I-V Characteristic Analysis**: Generated and analyzed the current-voltage (I-V) polarization curves for the cell in a voltage range of **1.2 V to 1.9 V**[cite: 131].
+* **I-V Characteristic Analysis**: Generated and analyzed the current-voltage (I-V) polarization curves for the cell in a voltage range of **1.2 V to 1.9 V**.
 * **Parametric Study**: Systematically investigated the effect of key design parameters on cell performance. The parameters studied were:
     * **Cathode Dimensions**
     * **Electrode Spacing**
@@ -28,36 +28,36 @@ This project involved a detailed investigation into the electrochemical behavior
 
 ## 💻 COMSOL Multiphysics Simulation
 
-[cite_start]The model is based on a Dewar-type Isoperibolic Calorimeter, which allows for accurate heat measurements[cite: 7, 22]. [cite_start]The simulation was built using **stationary and time-dependent modules** and employed **fine mesh discretization** for accurate electrochemical transport modeling[cite: 100, 131].
+The model is based on a Dewar-type Isoperibolic Calorimeter, which allows for accurate heat measurements [3]. The simulation was built using **stationary and time-dependent modules** and employed **fine mesh discretization** for accurate electrochemical transport modeling.
 
 ### Model Setup
-* [cite_start]**Software**: COMSOL Multiphysics [cite: 6]
-* [cite_start]**Physics Module**: Water Electrolyzer [cite: 100]
+* **Software**: COMSOL Multiphysics
+* **Physics Module**: Water Electrolyzer
 
 ### Geometry
-[cite_start]The simulation uses a 2D geometry representing the core components of the electrolysis cell[cite: 101]:
-* [cite_start]**Cathode (Pd) Width**: $0.2~cm$ [cite: 101]
-* [cite_start]**Anode (Pt) Width**: $0.2~cm$ [cite: 101]
-* [cite_start]**Separator Width**: $0.1~cm$ [cite: 101]
-* [cite_start]**Electrode Height**: $10~cm$ [cite: 102]
+The simulation uses a 2D geometry representing the core components of the electrolysis cell:
+* **Cathode (Pd) Width**: $0.2~cm$
+* **Anode (Pt) Width**: $0.2~cm$
+* **Separator Width**: $0.1~cm$
+* **Electrode Height**: $10~cm$
 
-
-> [cite_start]*Figure: Model geometry used in COMSOL, from left to right: Cathode, Separator, Anode.* [cite: 126]
+![Model Geometry](model.png)
+> *Figure: Model geometry used in COMSOL, from left to right: Cathode, Separator, Anode.*
 
 ### Boundary and Initial Conditions
-* [cite_start]**Initial Cell Voltage**: $1.2~V$ [cite: 103]
-* [cite_start]**Operating Temperature**: $343~K$ ($70^\circ C$) [cite: 103]
-* [cite_start]**Electrolyte**: 6M KOH [cite: 104]
-* [cite_start]**Pressure**: $1~atm$ [cite: 103]
+* **Initial Cell Voltage**: $1.2~V$
+* **Operating Temperature**: $343~K$ ($70^\circ C$)
+* **Electrolyte**: 6M KOH
+* **Pressure**: $1~atm$
 
 ---
 
 ## 📊 Preliminary Results
 
-[cite_start]A key result from the simulation is the polarization curve, which shows the relationship between cell voltage and the resulting current density[cite: 131]. This is fundamental to understanding the cell's electrochemical efficiency and operational characteristics.
+A key result from the simulation is the polarization curve, which shows the relationship between cell voltage and the resulting current density. This is fundamental to understanding the cell's electrochemical efficiency and operational characteristics.
 
-
-> [cite_start]*Figure: Cell Voltage ($E_{cell}$) vs. Current Density curve generated from the simulation.* [cite: 151]
+![Polarization Curve](results.png)
+> *Figure: Cell Voltage ($E_{cell}$) vs. Current Density curve generated from the simulation.*
 
 ---
 
@@ -65,22 +65,16 @@ This project involved a detailed investigation into the electrochemical behavior
 
 While this project covered extensive parametric analysis, the model can be extended to explore more fundamental questions about the anomalous heat phenomenon:
 
-1.  [cite_start]What are the specific nuclear reactions and their energetics that could explain the excess heat? [cite: 87]
-2.  [cite_start]What is the activation barrier for such reactions, and how might it be overcome within the palladium lattice? [cite: 90, 91]
-3.  [cite_start]How do transient effects, such as the "heat bursts" reported by Fleischmann and Pons, manifest in the simulation? [cite: 26, 27]
+1.  What are the specific nuclear reactions and their energetics that could explain the excess heat? [5]
+2.  What is the activation barrier for such reactions, and how might it be overcome within the palladium lattice?
+3.  How do transient effects, such as the "heat bursts" reported by Fleischmann and Pons, manifest in the simulation? [1]
 
 ---
 
 ## 📚 References
 
-[1] Fleischmann M., et al.: Calorimetry of the palladium-deuterium-heavy water system. [cite_start]*Electroanalytical Chemistry*, 1990. [cite: 153]
-
-[cite_start][2] Miles, M. H., & Fleischmann, M.: Isoperibolic calorimetric measurements of the fleischmann-pons effect. [cite: 154]
-
-[cite_start][3] Miles, M. H.: Fundamentals of isoperibolic calorimetric for cold fusion experiments. [cite: 155]
-
-[4] Miles, M. H.: Calorimetric studies of pd/d20+liod electrolysis cells. [cite_start]*Electroanalytical Chemistry*, 2000. [cite: 156]
-
-[5] Storms, E.: Science of low energy nuclear reactions. [cite_start]2007. [cite: 157]etric for cold fusion experiments.
+[1] Fleischmann M., et al.: Calorimetry of the palladium-deuterium-heavy water system. *Electroanalytical Chemistry*, 1990.
+[2] Miles, M. H., & Fleischmann, M.: Isoperibolic calorimetric measurements of the fleischmann-pons effect.
+[3] Miles, M. H.: Fundamentals of isoperibolic calorimetric for cold fusion experiments.
 [4] Miles, M. H.: Calorimetric studies of pd/d20+liod electrolysis cells. *Electroanalytical Chemistry*, 2000.
 [5] Storms, E.: Science of low energy nuclear reactions. 2007.
